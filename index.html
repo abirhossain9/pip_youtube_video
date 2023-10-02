@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .video-container {
+        position: relative;
+        width: 1200px;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      .video-container.pip {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 300px;
+        height: 150px;
+        z-index: 100;
+        border: 1px solid black;
+        cursor: grab;
+      }
+
+      .video-container.pip:active {
+        cursor: grabbing;
+      }
+
+      .video-container.pip iframe {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <iframe
+        width="1200"
+        height="500"
+        src="https://www.youtube.com/embed/XKu_SEDAykw"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div
+      style="
+        height: 8000px;
+        margin-top: 5%;
+        text-align: center;
+        font-weight: 400;
+        font-size: larger;
+      "
+    >
+      scroll down
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
